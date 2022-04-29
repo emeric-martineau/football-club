@@ -1,0 +1,14 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Horraire</th>
+        <th scope="col" *ngFor='let g of getGrounds()'>{{ g.getName() }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let h of getHours()'>
+        <th scope="row">{{ h }}</th>
+        <th scope="col" *ngFor='let g of getGrounds()'>{{ getMatchOfHours(g.getName(), h)?.getName() }}</th>
+      </tr>
+    </tbody>
+  </table>
