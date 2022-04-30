@@ -73,7 +73,7 @@ export class GeneralPlaningComponent implements OnInit {
     return this.hours;
   }
 
-  getMatchOfHours(groundname: string, hour: number): Match | null {
+  getMatchOfHours(groundname: string, hour: number): Match {
     const currentGround = this.grounds.find(element => element.getName() == groundname);
 
     if (currentGround) {
@@ -84,6 +84,6 @@ export class GeneralPlaningComponent implements OnInit {
       }
     }
 
-    return null;
+    return new Match(hour, -1, -1, '', []);
   }
 }

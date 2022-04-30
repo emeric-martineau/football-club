@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GeneralPlaningComponent } from './components/general-planing/general-planing.component';
+import { MatchResultComponent } from './components//match-result/match-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GeneralPlaningComponent
+    GeneralPlaningComponent,
+    MatchResultComponent
   ],
   imports: [
     BrowserModule,

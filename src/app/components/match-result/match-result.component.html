@@ -1,0 +1,9 @@
+<div class="table-responsive">
+    <table class="table table-borderless">
+        <tr *ngFor='let match of matchs'>
+            <th>{{ match.getName() }}</th>
+            <th class="score">{{ match.getScore() }}</th>
+        </tr>
+    </table>
+    
+</div>
