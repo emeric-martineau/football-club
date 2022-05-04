@@ -1,19 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button type="button" class="btn btn-primary">Planing général</button>
-
-    <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Catégories
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-    </div>
-
-    <button type="button" class="btn">Phase finale</button>
-</nav>
 <!-- use https://ng-bootstrap.github.io/#/components/dropdown/examples -->
 
-<app-general-planing></app-general-planing>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand">Résultat match football</span>
+
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+        </li>
+        
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdownCategory" role="button">
+            Catégories
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdownCategory" class="dropdown-menu">
+            <a ngbDropdownItem (click)="onSelectCategory('')" href="#">{{ PLANING_GENERAL_TEXT }}</a>
+            <a *ngFor='let c of planing.getCategories()' ngbDropdownItem (click)="onSelectCategory(c.getName())" href="#">{{ c.getName() }}</a>
+          </div>
+        </li>
+
+        <li class="nav-item" ngbDropdown *ngIf="displayGroupDropDown">
+          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+            Catégories
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+            <a *ngFor='let g of groups' ngbDropdownItem href="#" (click)="$event.preventDefault()">{{ g.getName() }}</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<app-general-planing *ngIf="displayPlaningGeneral"></app-general-planing>

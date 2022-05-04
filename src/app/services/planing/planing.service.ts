@@ -3750,6 +3750,35 @@ export class Ground {
   }
 }
 
+export class Rank {
+
+}
+
+export class Group {
+  constructor(private name: string, private rank: Rank, private matchs: Match[]) {
+
+  }
+
+  getName(): string {
+    return this.name;
+  }
+
+  getMatchs(): Match[] {
+    return this.matchs;
+  }
+}
+
+export class Category {
+  constructor(private name: string, private group: Group[]) { };
+
+  public getName(): string {
+      return this.name;
+  }
+  public getGroup(): Group[] {
+      return this.group;
+  }
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -3767,15 +3796,7 @@ export class PlaningService {
     for(let indexMatch = 0; indexMatch < data.PlanningGeneral.Match.length; indexMatch++) { 
       currentMatch = data.PlanningGeneral.Match[indexMatch];
 
-      newMatch = new Match(
-          currentMatch.Heure / 100000,
-          currentMatch.Status,
-          currentMatch.CategoryID,
-          currentMatch.MatchNom, 
-          [
-            new Team(currentMatch.Equipe1, currentMatch.Score1),
-            new Team(currentMatch.Equipe2, currentMatch.Score2)
-          ]);
+      newMatch = this.generateMatch(currentMatch);
  
       matchs = allMatchs.get(currentMatch.Terrain)
 
@@ -3789,4 +3810,41 @@ export class PlaningService {
     return allMatchs;
   }
 
+  getCategories(): Category[] {
+      let categories: Category[] = [];
+
+      data.Categorie.forEach(element => {
+          categories.push(new Category(element.Name, this.generateGroups(element.Groupe)))
+      });
+
+      return categories;
+  }
+
+  private generateMatch(m: any): Match {
+    return new Match(
+        m.Heure / 100000,
+        m.Status,
+        m.CategoryID,
+        m.MatchNom, 
+        [
+          new Team(m.Equipe1, m.Score1),
+          new Team(m.Equipe2, m.Score2)
+        ]);
+  }
+
+  private generateMatchs(m: any): Match[] {
+      let matchs: Match[] = [];
+
+      m.forEach((element: any) => matchs.push(this.generateMatch(element)));
+      
+      return matchs;
+  }
+
+  private generateGroups(g: any): Group[] {
+    let groups: Group[] = [];
+
+    g.forEach((element: any) => groups.push(new Group(element.NomGroupe, new Rank(), this.generateMatchs(element.Matchs.Match))));
+
+    return groups;
+  }
 }
