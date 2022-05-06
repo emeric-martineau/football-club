@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { NumberValueAccessor } from '@angular/forms';
 
 const data = {
   "PlanningGeneral": {
@@ -3704,10 +3705,6 @@ export class Team {
   getScore(): number {
     return this.score;
   }
-
-  clone(): Team {
-    return new Team(this.name, this.score);
-  }
 }
 
 export class Match {
@@ -3751,11 +3748,51 @@ export class Ground {
 }
 
 export class Rank {
+    constructor(
+        private teamName: string,
+        private play: number, 
+        private win: number, 
+        private o2o: number, 
+        private lost: number, 
+        private goalIn: number, 
+        private goalOut: number, 
+        private points: number) {  }
 
+    getTeamName(): string {
+        return this.teamName;
+    }
+
+    getPlay(): number {
+        return this.play;
+    }
+
+    getWin(): number {
+        return this.win;
+    }
+
+    getO2O(): number {
+        return this.o2o;
+    }
+
+    getLost(): number {
+        return this.lost;
+    }
+
+    getGoalIn(): number {
+        return this.goalIn;
+    }
+
+    getGoalOut(): number {
+        return this.goalOut;
+    }
+
+    getPoints(): number {
+        return this.points;
+    }
 }
 
 export class Group {
-  constructor(private name: string, private rank: Rank, private matchs: Match[]) {
+  constructor(private name: string, private rank: Rank[], private matchs: Match[]) {
 
   }
 
@@ -3765,6 +3802,10 @@ export class Group {
 
   getMatchs(): Match[] {
     return this.matchs;
+  }
+
+  getRanks(): Rank[] {
+      return this.rank;
   }
 }
 
@@ -3840,10 +3881,20 @@ export class PlaningService {
       return matchs;
   }
 
+  private generateRank(r: any): Rank[] {
+    let ranks: Rank[] = [];
+
+    r.forEach((element: any) => ranks.push(
+        new Rank(element.Equipe, element.J, element.V, element.N, element.D, element.BP, element.BC, element.Points)
+    ));
+    
+    return ranks;
+  }
+
   private generateGroups(g: any): Group[] {
     let groups: Group[] = [];
 
-    g.forEach((element: any) => groups.push(new Group(element.NomGroupe, new Rank(), this.generateMatchs(element.Matchs.Match))));
+    g.forEach((element: any) => groups.push(new Group(element.NomGroupe, this.generateRank(element.Classement.Place), this.generateMatchs(element.Matchs.Match))));
 
     return groups;
   }

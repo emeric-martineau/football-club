@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GeneralPlaningComponent } from './components/general-planing/general-planing.component';
 import { MatchResultComponent } from './components//match-result/match-result.component';
+import { CategoryPlaningComponent } from './components/category-planing/category-planing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GeneralPlaningComponent,
-    MatchResultComponent
+    MatchResultComponent,
+    CategoryPlaningComponent
   ],
   imports: [
     BrowserModule,

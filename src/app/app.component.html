@@ -26,10 +26,10 @@
 
         <li class="nav-item" ngbDropdown *ngIf="displayGroupDropDown">
           <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
-            Catégories
+            Groupes
           </a>
           <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-            <a *ngFor='let g of groups' ngbDropdownItem href="#" (click)="$event.preventDefault()">{{ g.getName() }}</a>
+            <a *ngFor='let g of groups' ngbDropdownItem href="#" (click)="onSelectCategory(g.getName())">{{ g.getName() }}</a>
           </div>
         </li>
 
