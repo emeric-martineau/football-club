@@ -84,6 +84,11 @@ export class GeneralPlaningComponent implements OnInit {
       }
     }
 
-    return new Match(hour, -1, -1, '', []);
+    return new Match(hour, false, -1, '', []);
+  }
+
+  formatNumber(num: number) {
+    // console.info(formatNumber(900)) // 9h00
+    return num.toString().replace(/(\d)(?=(\d{2})+(?!\d))/g, '$1h')
   }
 }

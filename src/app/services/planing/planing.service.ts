@@ -3709,7 +3709,7 @@ export class Team {
 
 export class Match {
   constructor(private hour: number,
-    private status: number,
+    private played: boolean,
     private categoryId: number,
     private name: string,
     private teams: Team[]) { }
@@ -3718,8 +3718,8 @@ export class Match {
     return this.hour;
   }
 
-  getStatus(): number {
-    return this.status;
+  isPlayed(): boolean {
+    return this.played;
   }
 
   getCategoryId(): number {
@@ -3864,7 +3864,7 @@ export class PlaningService {
   private generateMatch(m: any): Match {
     return new Match(
         m.Heure / 100000,
-        m.Status,
+        m.Status == 2, // 1 : not player, 2 : played
         m.CategoryID,
         m.MatchNom, 
         [

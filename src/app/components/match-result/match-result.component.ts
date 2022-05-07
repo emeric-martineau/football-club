@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Team } from 'src/app/services/planing/planing.service';
+import { Match } from 'src/app/services/planing/planing.service';
 
 @Component({
   selector: 'match-result',
@@ -7,7 +7,7 @@ import { Team } from 'src/app/services/planing/planing.service';
   styleUrls: ['./match-result.component.css']
 })
 export class MatchResultComponent implements OnInit {
-  @Input() matchs: Team[] = [];
+  @Input() match: Match | undefined = undefined;
   
   constructor() { }
 
