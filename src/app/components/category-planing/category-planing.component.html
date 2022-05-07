@@ -1,4 +1,35 @@
 <div>
-  <span class="badge bg-primary">{{ category }}</span>
-  <span class="badge bg-secondary">{{ group }}</span>
+  <span class="badge bg-primary">{{ categoryName }}</span>
+  <span class="badge bg-secondary">{{ group?.getName() }}</span>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Equipe</th>
+        <th scope="col">Points</th>
+        <th scope="col">Joué</th>
+        <th scope="col">Gagné</th>
+        <th scope="col">Nul</th>
+        <th scope="col">Perdu</th>
+        <th scope="col">But pris</th>
+        <th scope="col">But mis</th>
+        <th scope="col">+/-</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let r of group?.getRanks()'>
+        <th scope="row">{{ r.getTeamName() }}</th>
+        <th scope="row">{{ r.getPoints() }}</th>
+        <th scope="row">{{ r.getPlay() }}</th>
+        <th scope="row">{{ r.getWin() }}</th>
+        <th scope="row">{{ r.getO2O() }}</th>
+        <th scope="row">{{ r.getLoose() }}</th>
+        <th scope="row">{{ r.getGoalIn() }}</th>
+        <th scope="row">{{ r.getGoalOut() }}</th>
+        <th scope="row">{{ r.getGoalOut() - r.getGoalIn() }}</th>
+      </tr>
+    </tbody>
+  </table>
 </div>

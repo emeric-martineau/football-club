@@ -3774,7 +3774,7 @@ export class Rank {
         return this.o2o;
     }
 
-    getLost(): number {
+    getLoose(): number {
         return this.lost;
     }
 
@@ -3884,8 +3884,14 @@ export class PlaningService {
   private generateRank(r: any): Rank[] {
     let ranks: Rank[] = [];
 
+    // J: nombre de matchs joués
+    // V : nombre de victoires
+    // N : nombre de matchs nuls
+    // D : nombre de défaites
+    // BP : nombre de buts marqués
+    // BC : nombre de buts encaissés
     r.forEach((element: any) => ranks.push(
-        new Rank(element.Equipe, element.J, element.V, element.N, element.D, element.BP, element.BC, element.Points)
+        new Rank(element.Equipe, element.J, element.V, element.N, element.D, element.BC, element.BP, element.Points)
     ));
     
     return ranks;

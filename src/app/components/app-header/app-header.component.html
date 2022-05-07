@@ -17,12 +17,12 @@
               Catégories
             </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdownCategory" class="dropdown-menu">
-              <a ngbDropdownItem (click)="onSelectCategory('')">{{ PLANING_GENERAL_TEXT }}</a>
+              <a ngbDropdownItem (click)="onSelectCategory('')">Planing général</a>
               <a *ngFor='let c of planing.getCategories()' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</a>
             </div>
           </li>
   
-          <li class="nav-item" ngbDropdown *ngIf="currentCategory != ''">
+          <li class="nav-item" ngbDropdown *ngIf="selectedCategoryName != ''">
             <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
               Groupes
             </a>

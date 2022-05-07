@@ -10,31 +10,29 @@ import { Category, Group, PlaningService } from '../../services/planing/planing.
 export class AppHeaderComponent implements OnInit {
   collapsed = true;
 
-  PLANING_GENERAL_TEXT = "Planing général";
-
   groups: Group[] = [];
 
-  currentCategory: string = '';
+  selectedCategoryName: string = '';
+  selectedGroupName: string = '';
 
   constructor(public planing: PlaningService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSelectCategory(data: string) {
-    if (data == '') {
+  onSelectCategory(categoryName: string) {
+    if (categoryName == '') {
       this.router.navigate(['']);
     } else {
-
-      this.currentCategory = data
+      this.selectedCategoryName = categoryName
 
       // TODO make it observable
-      this.groups = this.getListGroup(data);
+      this.groups = this.getListGroup(categoryName);
     }
   }
 
-  onSelectGroup(data: string) {
-    this.router.navigate(['category/', this.currentCategory, data]);
+  onSelectGroup(groupName: string) {
+    this.router.navigate(['category/', this.selectedCategoryName, groupName]);
   }
 
   private getListGroup(categoryName: string): Group[] {
