@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-category-planing',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryPlaningComponent implements OnInit {
 
-  constructor() { }
+  category: string = '';
+  group: string = '';
+
+  private subParam: any;
+
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.subParam = this.activatedRoute.params.subscribe(params => {
+      this.category = params['category'];
+      this.group = params['group'];
+   });
   }
 
+  ngOnDestroy() {
+    this.subParam.unsubscribe();
+  }
 }

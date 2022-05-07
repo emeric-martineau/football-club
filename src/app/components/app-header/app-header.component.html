@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand">Résultat match football</span>
+  
+      <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          </li>
+          
+          <li class="nav-item" ngbDropdown>
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdownCategory" role="button">
+              Catégories
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdownCategory" class="dropdown-menu">
+              <a ngbDropdownItem (click)="onSelectCategory('')">{{ PLANING_GENERAL_TEXT }}</a>
+              <a *ngFor='let c of planing.getCategories()' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</a>
+            </div>
+          </li>
+  
+          <li class="nav-item" ngbDropdown *ngIf="currentCategory != ''">
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+              Groupes
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+              <a *ngFor='let g of groups' ngbDropdownItem (click)="onSelectGroup(g.getName())">{{ g.getName() }}</a>
+            </div>
+          </li>
+  
+        </ul>
+      </div>
+    </div>
+  </nav>
