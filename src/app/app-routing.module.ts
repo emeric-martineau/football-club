@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryPlaningComponent } from './components/category-planing/category-planing.component';
+import { FinalComponent } from './components/final/final.component';
 import { GeneralPlaningComponent } from './components/general-planing/general-planing.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
@@ -8,6 +9,10 @@ const routes: Routes = [
   {
     path: 'category/:category/:group',
     component: CategoryPlaningComponent
+  },  
+  {
+    path: 'final',
+    component: FinalComponent
   },  
   {
     path: '',
@@ -20,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -9,6 +9,7 @@ import { MatchResultComponent } from './components//match-result/match-result.co
 import { CategoryPlaningComponent } from './components/category-planing/category-planing.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FinalComponent } from './components/final/final.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     CategoryPlaningComponent,
     AppHeaderComponent,
     PageNotFoundComponent,
+    FinalComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,9 +9,9 @@
     <tbody>
       <tr *ngFor='let h of getHours()'>
         <th scope="row">{{ formatNumber(h) }}</th>
-        <th scope="col" *ngFor='let g of getGrounds()'>
+        <td scope="col" *ngFor='let g of getGrounds()'>
           <match-result [match]="getMatchOfHours(g.getName(), h)"></match-result>  
-        </th>
+        </td>
       </tr>
     </tbody>
   </table>

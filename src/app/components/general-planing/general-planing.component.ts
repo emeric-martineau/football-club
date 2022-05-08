@@ -84,7 +84,7 @@ export class GeneralPlaningComponent implements OnInit {
       }
     }
 
-    return new Match(hour, false, -1, '', []);
+    return new Match(hour, false, -1, '', [], '');
   }
 
   formatNumber(num: number) {

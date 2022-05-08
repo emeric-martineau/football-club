@@ -2,8 +2,8 @@
     <table class="table table-borderless">
         <tr *ngFor='let t of match?.getTeams()'>
             <th>{{ t.getName() }}</th>
-            <th class="score">{{ t.getScore() }}</th>
+            <td class="score">{{ t.getScore() }}</td>
         </tr>
     </table>    
-    <span *ngIf="match?.isPlayed()" class="badge bg-success">Match joué</span>
+    <span *ngIf="match?.isPlayed()" class="badge bg-primary">Match joué</span>
 </div>

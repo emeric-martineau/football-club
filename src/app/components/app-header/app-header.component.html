@@ -17,8 +17,9 @@
               Catégories
             </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdownCategory" class="dropdown-menu">
-              <a ngbDropdownItem (click)="onSelectCategory('')">Planing général</a>
+              <a ngbDropdownItem (click)="onSelectCategory(GENERAL_PLANING)">Planing général</a>
               <a *ngFor='let c of planing.getCategories()' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</a>
+              <a ngbDropdownItem (click)="onSelectCategory(FINAL)">Phase finale</a>
             </div>
           </li>
   

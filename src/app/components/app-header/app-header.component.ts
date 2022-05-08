@@ -8,6 +8,9 @@ import { Category, Group, PlaningService } from '../../services/planing/planing.
   styleUrls: ['./app-header.component.css']
 })
 export class AppHeaderComponent implements OnInit {
+  GENERAL_PLANING = 'PG';
+  FINAL = 'PF';
+
   collapsed = true;
 
   groups: Group[] = [];
@@ -21,13 +24,18 @@ export class AppHeaderComponent implements OnInit {
   }
 
   onSelectCategory(categoryName: string) {
-    if (categoryName == '') {
-      this.router.navigate(['']);
-    } else {
-      this.selectedCategoryName = categoryName
+    switch (categoryName) {
+      case this.GENERAL_PLANING:
+        this.router.navigate(['']);
+        break;
+      case this.FINAL:
+        this.router.navigate(['final']);
+        break;
+      default:
+        this.selectedCategoryName = categoryName
 
-      // TODO make it observable
-      this.groups = this.getListGroup(categoryName);
+        // TODO make it observable
+        this.groups = this.getListGroup(categoryName);
     }
   }
 

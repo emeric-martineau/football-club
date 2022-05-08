@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { NumberValueAccessor } from '@angular/forms';
 
 const data = {
   "PlanningGeneral": {
@@ -3712,7 +3711,8 @@ export class Match {
     private played: boolean,
     private categoryId: number,
     private name: string,
-    private teams: Team[]) { }
+    private teams: Team[],
+    private ground: string) { }
 
   getHour(): number {
     return this.hour;
@@ -3732,6 +3732,10 @@ export class Match {
 
   getTeams(): Team[] {
     return this.teams;
+  }
+
+  getGround(): string {
+    return this.ground;
   }
 }
 
@@ -3810,13 +3814,18 @@ export class Group {
 }
 
 export class Category {
-  constructor(private name: string, private group: Group[]) { };
+  constructor(private name: string, private group: Group[], private final: Match[]) { };
 
   public getName(): string {
       return this.name;
   }
+
   public getGroup(): Group[] {
       return this.group;
+  }
+
+  public getFinal(): Match[] {
+      return this.final;
   }
 }
 
@@ -3855,7 +3864,7 @@ export class PlaningService {
       let categories: Category[] = [];
 
       data.Categorie.forEach(element => {
-          categories.push(new Category(element.Name, this.generateGroups(element.Groupe)))
+          categories.push(new Category(element.Name, this.generateGroups(element.Groupe), this.generateMatchs(element.PhaseFinale.Matchs.Match)))
       });
 
       return categories;
@@ -3870,7 +3879,8 @@ export class PlaningService {
         [
           new Team(m.Equipe1, m.Score1),
           new Team(m.Equipe2, m.Score2)
-        ]);
+        ],
+        m.Terrain);
   }
 
   private generateMatchs(m: any): Match[] {
