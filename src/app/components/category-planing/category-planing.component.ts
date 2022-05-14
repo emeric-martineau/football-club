@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Category, Group, PlaningService } from 'src/app/services/planing/planing.service';
+import { Category, Group, Match, PlaningService } from 'src/app/services/planing/planing.service';
 
 @Component({
   selector: 'app-category-planing',
@@ -10,7 +10,9 @@ import { Category, Group, PlaningService } from 'src/app/services/planing/planin
 export class CategoryPlaningComponent implements OnInit {
 
   categoryName: string = '';
+  currentTeamName: string = '';
   group: Group | undefined;
+  matchs: Match[] | undefined;
 
   private subParam: any;
 
@@ -30,6 +32,15 @@ export class CategoryPlaningComponent implements OnInit {
 
   ngOnDestroy() {
     this.subParam.unsubscribe();
+  }
+
+  onSelectGroup(teamName: string) {
+    if (this.group) {
+      this.matchs =  this.group.getMatchs().filter((element: Match) => 
+        element.getTeams()[0].getName() == teamName || element.getTeams()[1].getName() == teamName);
+
+      this.currentTeamName = teamName;
+    }
   }
 
   private getListGroup(categoryName: string): Group[] {

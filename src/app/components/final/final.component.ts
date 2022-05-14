@@ -16,11 +16,6 @@ export class FinalComponent implements OnInit {
     this.onSelectCategory('');
   }
 
-  formatNumber(num: number) {
-    // console.info(formatNumber(900)) // 9h00
-    return num.toString().replace(/(\d)(?=(\d{2})+(?!\d))/g, '$1h')
-  }
-
   onSelectCategory(category: string) {
     let m;
 

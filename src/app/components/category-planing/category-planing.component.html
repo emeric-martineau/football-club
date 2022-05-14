@@ -19,7 +19,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let r of group?.getRanks()'>
+      <tr *ngFor='let r of group?.getRanks()' (click)="onSelectGroup(r.getTeamName())" [ngClass]="(currentTeamName == r.getTeamName()) ? 'table-primary' : ''">
         <th scope="row">{{ r.getTeamName() }}</th>
         <th scope="row">{{ r.getPoints() }}</th>
         <th scope="row">{{ r.getPlay() }}</th>
@@ -33,3 +33,5 @@
     </tbody>
   </table>
 </div>
+
+<category-result *ngIf="matchs" [matchs]="matchs"></category-result>

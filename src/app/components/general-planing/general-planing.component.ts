@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlaningService, Match } from 'src/app/services/planing/planing.service';
+import Utils from 'src/app/utils';
 
 export class Ground {
   constructor(private name: string, private matchs: Match[]) {}
@@ -88,7 +89,6 @@ export class GeneralPlaningComponent implements OnInit {
   }
 
   formatNumber(num: number) {
-    // console.info(formatNumber(900)) // 9h00
-    return num.toString().replace(/(\d)(?=(\d{2})+(?!\d))/g, '$1h')
+    return Utils.formatNumber(num);
   }
 }
