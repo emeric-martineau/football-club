@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs/internal/Subscription';
 import { Category, Group, PlaningService } from '../../services/planing/planing.service';
 
 @Component({
@@ -13,14 +14,29 @@ export class AppHeaderComponent implements OnInit {
 
   collapsed = true;
 
+  // Current group of selectedCatetoryName
   groups: Group[] = [];
-
+  // Selected category name
   selectedCategoryName: string = '';
+  // Selected group name of category name
   selectedGroupName: string = '';
+  // Categories
+  categories: Category[] = [];
+  
+  private categoriesSubscribe: Subscription | undefined;
 
   constructor(public planing: PlaningService, private router: Router) { }
 
   ngOnInit(): void {
+    this.categoriesSubscribe = this.planing.getCategories().subscribe(c => {
+      this.categories = c;
+
+      this.groups = this.getListGroup(this.selectedCategoryName);    
+    })
+  }
+
+  ngOnDestroy() {
+    this.categoriesSubscribe?.unsubscribe();
   }
 
   onSelectCategory(categoryName: string) {
@@ -34,7 +50,6 @@ export class AppHeaderComponent implements OnInit {
       default:
         this.selectedCategoryName = categoryName
 
-        // TODO make it observable
         this.groups = this.getListGroup(categoryName);
     }
   }
@@ -44,7 +59,7 @@ export class AppHeaderComponent implements OnInit {
   }
 
   private getListGroup(categoryName: string): Group[] {
-    let c:Category | undefined = this.planing.getCategories().find(element => element.getName() == categoryName);
+    let c:Category | undefined = this.categories.find(element => element.getName() == categoryName);
 
     if (c) {
       return c.getGroup();      

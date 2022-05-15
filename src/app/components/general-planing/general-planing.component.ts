@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { PlaningService, Match } from 'src/app/services/planing/planing.service';
 import Utils from 'src/app/utils';
 
@@ -26,44 +27,24 @@ export class GeneralPlaningComponent implements OnInit {
   // All Ground order by name
   private grounds: Ground[] = [];
 
-  private generateGroundsList() {
-    let listOfMatchs = this.planing.getMatchs();
-    let keys: string[] = [];
-
-    for (let key of listOfMatchs.keys()) {
-      keys.push(key);
-    }
-
-    for(let k of keys.sort()) {
-      if (listOfMatchs.get(k)) {
-        this.grounds.push(
-          new Ground(k, listOfMatchs.get(k)!)
-        );  
-      }
-    }
-  }
-
-  private generateHoursList() {
-    let h: number[] = [];
-
-    // Put all hours in list
-    this.grounds.forEach(g => 
-      g.getMatchs().forEach(m => h.push(m.getHour()))
-    );
-
-    let allHours = [...new Set(h)];
-
-    this.hours = allHours.sort((a, b) => a - b);
-  }
+  private matchsSubscribe: Subscription | undefined;
 
   constructor(private planing: PlaningService) {  }
 
   ngOnInit(): void {
-    // First generate a list for each ground with list of match
-    this.generateGroundsList();
+    console.log('ngOnInit()')
+    this.matchsSubscribe = this.planing.getMatchs().subscribe(m => {
+      // First generate a list for each ground with list of match
+      this.generateGroundsList(m);
 
-    // Generate list of available hours
-    this.generateHoursList();
+      // Generate list of available hours
+      this.generateHoursList();
+    })
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy()')
+    this.matchsSubscribe?.unsubscribe();
   }
 
   getGrounds(): Ground[] {
@@ -90,5 +71,34 @@ export class GeneralPlaningComponent implements OnInit {
 
   formatNumber(num: number) {
     return Utils.formatNumber(num);
+  }
+
+  private generateGroundsList(listOfMatchs: Map<string, Match[]>) {
+    let keys: string[] = [];
+
+    for (let key of listOfMatchs.keys()) {
+      keys.push(key);
+    }
+
+    for(let k of keys.sort()) {
+      if (listOfMatchs.get(k)) {
+        this.grounds.push(
+          new Ground(k, listOfMatchs.get(k)!)
+        );   
+      }
+    }
+  }
+
+  private generateHoursList() {
+    let h: number[] = [];
+
+    // Put all hours in list
+    this.grounds.forEach(g => 
+      g.getMatchs().forEach(m => h.push(m.getHour()))
+    );
+
+    let allHours = [...new Set(h)];
+
+    this.hours = allHours.sort((a, b) => a - b);
   }
 }

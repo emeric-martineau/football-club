@@ -11,6 +11,7 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FinalComponent } from './components/final/final.component';
 import { CategoryResultComponent } from './components/category-result/category-result.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CategoryResultComponent } from './components/category-result/category-r
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

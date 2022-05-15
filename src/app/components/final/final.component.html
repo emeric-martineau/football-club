@@ -3,7 +3,7 @@
 <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
     <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>Catégories</button>
     <div ngbDropdownMenu aria-labelledby="dropdownManual">
-      <button *ngFor='let c of planing.getCategories()' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</button>
+      <button *ngFor='let c of categories' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</button>
     </div>
 </div>
 

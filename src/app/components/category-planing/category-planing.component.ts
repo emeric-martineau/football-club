@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/internal/Subscription';
 import { Category, Group, Match, PlaningService } from 'src/app/services/planing/planing.service';
 
 @Component({
@@ -8,30 +9,42 @@ import { Category, Group, Match, PlaningService } from 'src/app/services/planing
   styleUrls: ['./category-planing.component.css']
 })
 export class CategoryPlaningComponent implements OnInit {
-
+  // Current category name
   categoryName: string = '';
+  // Current group name
+  groupName: string = '';
+  // The name of team
   currentTeamName: string = '';
+  // Current group
   group: Group | undefined;
+  // All match
   matchs: Match[] | undefined;
+  // Categories
+  categories: Category[] = [];
 
-  private subParam: any;
+  private subParam: Subscription | undefined;
+  private categoriesSubscribe: Subscription | undefined;
 
   constructor(private activatedRoute: ActivatedRoute, public planing: PlaningService) { }
 
   ngOnInit(): void {
     this.subParam = this.activatedRoute.params.subscribe(params => {
       this.categoryName = params['category'];
-      let groupName = params['group'];
+      this.groupName = params['group'];
 
-      // TODO make it observable
-      let groups = this.getListGroup(this.categoryName);
+      this.group = this.findGroup()
+    });
 
-      this.group = groups.find(element => element.getName() == groupName)
-   });
+    this.categoriesSubscribe = this.planing.getCategories().subscribe(c => {
+      this.categories = c;
+
+      this.group = this.findGroup();      
+    })
   }
 
   ngOnDestroy() {
-    this.subParam.unsubscribe();
+    this.subParam?.unsubscribe();
+    this.categoriesSubscribe?.unsubscribe();
   }
 
   onSelectGroup(teamName: string) {
@@ -43,8 +56,14 @@ export class CategoryPlaningComponent implements OnInit {
     }
   }
 
+  private findGroup(): Group | undefined {
+    let groups = this.getListGroup(this.categoryName);
+
+    return groups.find(element => element.getName() == this.groupName)
+  }
+
   private getListGroup(categoryName: string): Group[] {
-    let c:Category | undefined = this.planing.getCategories().find(element => element.getName() == categoryName);
+    let c:Category | undefined = this.categories.find(element => element.getName() == categoryName);
 
     if (c) {
       return c.getGroup();      
