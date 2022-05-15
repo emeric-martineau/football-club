@@ -18,8 +18,7 @@
             </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdownCategory" class="dropdown-menu">
               <a ngbDropdownItem (click)="onSelectCategory(GENERAL_PLANING)">Planing général</a>
-              <a *ngFor='let c of categories' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</a>
-              <a ngbDropdownItem (click)="onSelectCategory(FINAL)">Phase finale</a>
+              <a *ngFor='let c of categories' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</a>              
             </div>
           </li>
   
@@ -29,6 +28,7 @@
             </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
               <a *ngFor='let g of groups' ngbDropdownItem (click)="onSelectGroup(g.getName())">{{ g.getName() }}</a>
+              <a ngbDropdownItem (click)="onSelectGroup(FINAL)">Phase finale</a>
             </div>
           </li>
   

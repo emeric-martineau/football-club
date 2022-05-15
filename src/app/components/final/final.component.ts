@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Category, Match, PlaningService } from 'src/app/services/planing/planing.service';
 
@@ -9,34 +10,36 @@ import { Category, Match, PlaningService } from 'src/app/services/planing/planin
 })
 export class FinalComponent implements OnInit {
   matchs: Match[] = []
+  // Category name
   categoryName = '';
 
   // Categories
   categories: Category[] = [];
   
+  private subParam: Subscription | undefined;
   private categoriesSubscribe: Subscription | undefined;
 
-  constructor(public planing: PlaningService) {  }
+  constructor(private activatedRoute: ActivatedRoute, private planing: PlaningService) {  }
 
   ngOnInit(): void {
+    this.subParam = this.activatedRoute.params.subscribe(params => {
+      this.categoryName = params['category'];
+
+      this.findSelectCategory(this.categoryName)      
+    });
+
     let result = this.planing.getCategories();
 
-    this.categories = result.data;
+    this.loadDataFunc(result.data, this.categoryName);
 
-    this.onSelectCategory(this.categoryName);  
-
-    this.categoriesSubscribe = result.observable.subscribe(c => {
-      this.categories = c;
-
-      this.onSelectCategory(this.categoryName);  
-    })
+    this.categoriesSubscribe = result.observable.subscribe(c => this.loadDataFunc(c, this.categoryName));
   }
 
   ngOnDestroy() {
     this.categoriesSubscribe?.unsubscribe();
   }
 
-  onSelectCategory(category: string) {
+  private findSelectCategory(category: string) {
     let m;
 
     if (category == '') {
@@ -52,5 +55,11 @@ export class FinalComponent implements OnInit {
     } else {
       this.matchs = [];
     }
+  }
+
+  private loadDataFunc(c: Category[], categoryName: string) {
+    this.categories = c;
+
+    this.findSelectCategory(categoryName)   
   }
 }

@@ -50,9 +50,6 @@ export class AppHeaderComponent implements OnInit {
       case this.GENERAL_PLANING:
         this.router.navigate(['']);
         break;
-      case this.FINAL:
-        this.router.navigate(['final']);
-        break;
       default:
         this.selectedCategoryName = categoryName
 
@@ -61,7 +58,11 @@ export class AppHeaderComponent implements OnInit {
   }
 
   onSelectGroup(groupName: string) {
-    this.router.navigate(['category/', this.selectedCategoryName, groupName]);
+    if (groupName == this.FINAL) {
+      this.router.navigate(['final/', this.selectedCategoryName]);
+    } else {
+      this.router.navigate(['category/', this.selectedCategoryName, groupName]);
+    }
   }
 
   private getListGroup(categoryName: string): Group[] {

@@ -1,15 +1,6 @@
-
-
-<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-    <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>Catégories</button>
-    <div ngbDropdownMenu aria-labelledby="dropdownManual">
-      <button *ngFor='let c of categories' ngbDropdownItem (click)="onSelectCategory(c.getName())">{{ c.getName() }}</button>
-    </div>
-</div>
-
-<div class="d-inline-block">
+<div>
     <span class="badge bg-primary">{{ categoryName }}</span>
-    <span class="badge bg-secondary">Phase finale</span>
-</div>
+    <span class="badge bg-secondary">Final</span>
+  </div>
 
 <category-result [matchs]="matchs"></category-result>

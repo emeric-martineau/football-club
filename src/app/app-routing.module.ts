@@ -11,7 +11,7 @@ const routes: Routes = [
     component: CategoryPlaningComponent
   },  
   {
-    path: 'final',
+    path: 'final/:category',
     component: FinalComponent
   },  
   {
