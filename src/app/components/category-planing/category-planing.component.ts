@@ -35,7 +35,13 @@ export class CategoryPlaningComponent implements OnInit {
       this.group = this.findGroup()
     });
 
-    this.categoriesSubscribe = this.planing.getCategories().subscribe(c => {
+    let result = this.planing.getCategories();
+
+    this.categories = result.data;
+
+    this.group = this.findGroup();  
+
+    this.categoriesSubscribe = result.observable.subscribe(c => {
       this.categories = c;
 
       this.group = this.findGroup();      

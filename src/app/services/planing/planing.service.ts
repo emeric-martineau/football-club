@@ -138,13 +138,25 @@ export class Category {
   }
 }
 
+export class MatchResult {
+  constructor(public observable: Observable<Map<string, Match[]>>, public data: Map<string, Match[]>) {};
+}
+
+export class CategoryResult {
+  constructor(public observable: Observable<Category[]>, public data: Category[]) {};
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class PlaningService {
-  httpData$: Observable<any> = this.http.get('/data/publier_1.json');
-  matchs: Subject<Map<string, Match[]>> = new Subject();
-  categories: Subject<Category[]> = new Subject();
+  private httpData$: Observable<any> = this.http.get('/data/publier_1.json');
+  private matchs: Subject<Map<string, Match[]>> = new Subject();
+  private categories: Subject<Category[]> = new Subject();
+
+  // Last data
+  private currentMatchs = new Map<string, Match[]>();
+  private currentCategories: Category[] = [];
 
   constructor(private http: HttpClient) {
     this.httpData$.subscribe(d => {
@@ -153,12 +165,17 @@ export class PlaningService {
     });
   }
 
-  getMatchs(): Observable<Map<string, Match[]>> {
-    return this.matchs.asObservable();
+  getMatchs(): MatchResult {
+    return new MatchResult(
+      this.matchs.asObservable(),
+      this.currentMatchs
+    );
   }
 
-  getCategories(): Observable<Category[]> {
-    return this.categories.asObservable();
+  getCategories(): CategoryResult {
+    return new CategoryResult(
+      this.categories.asObservable(),
+      this.currentCategories);
   }
 
   private loadMatchs(data: any) {
@@ -182,6 +199,7 @@ export class PlaningService {
       }
     }
 
+    this.currentMatchs = allMatchs;
     this.matchs.next(allMatchs);
   }
 
@@ -192,6 +210,7 @@ export class PlaningService {
         categories.push(new Category(element.Name, this.generateGroups(element.Groupe), this.generateMatchs(element.PhaseFinale.Matchs.Match)))
     });
 
+    this.currentCategories = categories;
     this.categories.next(categories);
   }
 

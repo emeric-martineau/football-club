@@ -19,7 +19,13 @@ export class FinalComponent implements OnInit {
   constructor(public planing: PlaningService) {  }
 
   ngOnInit(): void {
-    this.categoriesSubscribe = this.planing.getCategories().subscribe(c => {
+    let result = this.planing.getCategories();
+
+    this.categories = result.data;
+
+    this.onSelectCategory(this.categoryName);  
+
+    this.categoriesSubscribe = result.observable.subscribe(c => {
       this.categories = c;
 
       this.onSelectCategory(this.categoryName);  

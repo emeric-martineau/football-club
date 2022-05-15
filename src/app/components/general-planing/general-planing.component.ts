@@ -32,8 +32,15 @@ export class GeneralPlaningComponent implements OnInit {
   constructor(private planing: PlaningService) {  }
 
   ngOnInit(): void {
-    console.log('ngOnInit()')
-    this.matchsSubscribe = this.planing.getMatchs().subscribe(m => {
+    let result = this.planing.getMatchs();
+
+    // First generate a list for each ground with list of match
+    this.generateGroundsList(result.data);
+
+      // Generate list of available hours
+    this.generateHoursList();
+
+    this.matchsSubscribe = result.observable.subscribe(m => {
       // First generate a list for each ground with list of match
       this.generateGroundsList(m);
 
@@ -43,7 +50,6 @@ export class GeneralPlaningComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    console.log('ngOnDestroy()')
     this.matchsSubscribe?.unsubscribe();
   }
 

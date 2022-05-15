@@ -28,7 +28,13 @@ export class AppHeaderComponent implements OnInit {
   constructor(public planing: PlaningService, private router: Router) { }
 
   ngOnInit(): void {
-    this.categoriesSubscribe = this.planing.getCategories().subscribe(c => {
+    let result = this.planing.getCategories();
+
+    this.categories = result.data;
+
+    this.groups = this.getListGroup(this.selectedCategoryName); 
+
+    this.categoriesSubscribe = result.observable.subscribe(c => {
       this.categories = c;
 
       this.groups = this.getListGroup(this.selectedCategoryName);    
