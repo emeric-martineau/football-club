@@ -25,7 +25,7 @@ export class AppHeaderComponent implements OnInit {
   
   private categoriesSubscribe: Subscription | undefined;
 
-  constructor(public planing: PlaningService, private router: Router) { }
+  constructor(private planing: PlaningService, private router: Router) { }
 
   ngOnInit(): void {
     let result = this.planing.getCategories();

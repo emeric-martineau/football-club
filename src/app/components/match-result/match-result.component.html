@@ -6,4 +6,5 @@
         </tr>
     </table>    
     <span *ngIf="match?.isPlayed()" class="badge bg-primary">Match joué</span>
+    <span class="badge bg-secondary">{{ match?.getCategoryName() }}</span>
 </div>

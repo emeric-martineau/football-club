@@ -6,12 +6,8 @@ import { Match } from 'src/app/services/planing/planing.service';
   templateUrl: './match-result.component.html',
   styleUrls: ['./match-result.component.css']
 })
-export class MatchResultComponent implements OnInit {
+export class MatchResultComponent {
   @Input() match: Match | undefined = undefined;
   
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

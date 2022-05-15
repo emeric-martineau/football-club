@@ -19,6 +19,7 @@ export class Match {
   constructor(private hour: number,
     private played: boolean,
     private categoryId: number,
+    private categoryName: string,
     private name: string,
     private teams: Team[],
     private ground: string) { }
@@ -45,6 +46,10 @@ export class Match {
 
   getGround(): string {
     return this.ground;
+  }
+
+  getCategoryName() {
+    return this.categoryName;
   }
 }
 
@@ -219,6 +224,7 @@ export class PlaningService {
         m.Heure / 100000,
         m.Status == 2, // 1 : not player, 2 : played
         m.CategoryID,
+        m.CategoryNom,
         m.MatchNom, 
         [
           new Team(m.Equipe1, m.Score1),

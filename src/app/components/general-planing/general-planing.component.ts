@@ -32,21 +32,11 @@ export class GeneralPlaningComponent implements OnInit {
   constructor(private planing: PlaningService) {  }
 
   ngOnInit(): void {
-    let result = this.planing.getMatchs();
+    let result = this.planing.getMatchs();  
 
-    // First generate a list for each ground with list of match
-    this.generateGroundsList(result.data);
+    this.loadDataFunc(result.data);
 
-      // Generate list of available hours
-    this.generateHoursList();
-
-    this.matchsSubscribe = result.observable.subscribe(m => {
-      // First generate a list for each ground with list of match
-      this.generateGroundsList(m);
-
-      // Generate list of available hours
-      this.generateHoursList();
-    })
+    this.matchsSubscribe = result.observable.subscribe(m => this.loadDataFunc(m))
   }
 
   ngOnDestroy() {
@@ -72,7 +62,7 @@ export class GeneralPlaningComponent implements OnInit {
       }
     }
 
-    return new Match(hour, false, -1, '', [], '');
+    return new Match(hour, false, -1, '', '', [], '');
   }
 
   formatNumber(num: number) {
@@ -106,5 +96,15 @@ export class GeneralPlaningComponent implements OnInit {
     let allHours = [...new Set(h)];
 
     this.hours = allHours.sort((a, b) => a - b);
+  }
+
+  private loadDataFunc(data: Map<string, Match[]> | undefined) {
+    if (data) {
+      // First generate a list for each ground with list of match
+      this.generateGroundsList(data);
+
+        // Generate list of available hours
+      this.generateHoursList();
+    }
   }
 }
