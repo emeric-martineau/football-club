@@ -2,9 +2,8 @@
     <table class="table table-borderless">
         <tr *ngFor='let t of match?.getTeams()'>
             <th>{{ t.getName() }}</th>
-            <td class="score">{{ t.getScore() }}</td>
+            <td class="score">{{ match?.isPlayed() ? t.getScore() : '-' }}</td>
         </tr>
-    </table>    
-    <span *ngIf="match?.isPlayed()" class="badge bg-primary">Match joué</span>
-    <span class="badge bg-secondary">{{ match?.getCategoryName() }}</span>
+    </table>
+    <span class="badge bg-primary">{{ match?.getCategoryName() }}</span>
 </div>
