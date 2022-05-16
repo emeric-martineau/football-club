@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 
 export class Team {
   constructor(private name: string, private score: number) { }
@@ -155,7 +155,8 @@ export class CategoryResult {
   providedIn: 'root'
 })
 export class PlaningService {
-  private httpData$: Observable<any> = this.http.get('/data/publier_1.json');
+  private httpData$: Observable<any> | undefined;
+  private httpDataSubscribe: Subscription | undefined;
   private matchs: Subject<Map<string, Match[]>> = new Subject();
   private categories: Subject<Category[]> = new Subject();
 
@@ -164,10 +165,19 @@ export class PlaningService {
   private currentCategories: Category[] = [];
 
   constructor(private http: HttpClient) {
-    this.httpData$.subscribe(d => {
+    let loadDataFromHTTP = () => {
+      this.httpDataSubscribe?.unsubscribe();
+      this.httpData$ = this.http.get('/data/match.json');
+  
+      this.httpDataSubscribe = this.httpData$.subscribe(d => {
         this.loadMatchs(d);
         this.loadCategories(d);
-    });
+      });
+    };
+    
+    setInterval(loadDataFromHTTP, 30000);
+
+    loadDataFromHTTP();
   }
 
   getMatchs(): MatchResult {

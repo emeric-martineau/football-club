@@ -3,6 +3,8 @@ import { Subscription } from 'rxjs';
 import { PlaningService, Match } from 'src/app/services/planing/planing.service';
 import Utils from 'src/app/utils';
 
+// TODO use https://bootstrap-table.com/docs/getting-started/introduction/ ?
+
 export class Ground {
   constructor(private name: string, private matchs: Match[]) {}
 
@@ -71,6 +73,7 @@ export class GeneralPlaningComponent implements OnInit {
 
   private generateGroundsList(listOfMatchs: Map<string, Match[]>) {
     let keys: string[] = [];
+    this.grounds = [];
 
     for (let key of listOfMatchs.keys()) {
       keys.push(key);
@@ -87,6 +90,7 @@ export class GeneralPlaningComponent implements OnInit {
 
   private generateHoursList() {
     let h: number[] = [];
+    this.hours = [];
 
     // Put all hours in list
     this.grounds.forEach(g => 

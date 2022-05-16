@@ -25,7 +25,7 @@ export class CategoryPlaningComponent implements OnInit {
   private subParam: Subscription | undefined;
   private categoriesSubscribe: Subscription | undefined;
 
-  constructor(private activatedRoute: ActivatedRoute, public planing: PlaningService) { }
+  constructor(private activatedRoute: ActivatedRoute, private planing: PlaningService) { }
 
   ngOnInit(): void {
     this.subParam = this.activatedRoute.params.subscribe(params => {
