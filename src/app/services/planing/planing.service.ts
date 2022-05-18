@@ -167,7 +167,7 @@ export class PlaningService {
   constructor(private http: HttpClient) {
     let loadDataFromHTTP = () => {
       this.httpDataSubscribe?.unsubscribe();
-      this.httpData$ = this.http.get('/data/match.json');
+      this.httpData$ = this.http.get('./data/match.json');
   
       this.httpDataSubscribe = this.httpData$.subscribe(d => {
         this.loadMatchs(d);

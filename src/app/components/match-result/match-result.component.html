@@ -1,5 +1,8 @@
 <div class="table-responsive position-relative">
     <table class="table table-borderless">
+        <tr>
+            <td colspan="2">{{ match?.getName() }}</td>
+        </tr>
         <tr *ngFor='let t of match?.getTeams()'>
             <th>{{ t.getName() }}</th>
             <td class="score">{{ match?.isPlayed() ? t.getScore() : '-' }}</td>
