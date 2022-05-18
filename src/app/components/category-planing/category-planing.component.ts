@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { Category, Group, Match, PlaningService } from 'src/app/services/planing/planing.service';
+import Utils from 'src/app/utils';
 
 @Component({
   selector: 'app-category-planing',
@@ -60,6 +61,10 @@ export class CategoryPlaningComponent implements OnInit {
 
       this.currentTeamName = teamName;
     }
+  }
+
+  getClassCssName(categoryName: string | undefined): string {
+    return Utils.classCssName(categoryName);
   }
 
   private findGroup(): Group | undefined {

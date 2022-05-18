@@ -1,5 +1,5 @@
 <div>
-  <span class="badge bg-primary">{{ categoryName }}</span>
+  <span class="badge" [ngClass]="getClassCssName(categoryName)">{{ categoryName }}</span>
   <span class="badge bg-secondary">{{ group?.getName() }}</span>
 </div>
 

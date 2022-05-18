@@ -8,5 +8,5 @@
             <td class="score">{{ match?.isPlayed() ? t.getScore() : '-' }}</td>
         </tr>
     </table>
-    <span class="badge bg-primary">{{ match?.getCategoryName() }}</span>
+    <span class="badge" [ngClass]="getClassCssName(match?.getCategoryName())">{{ match?.getCategoryName() }}</span>
 </div>
