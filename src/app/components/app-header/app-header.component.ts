@@ -10,7 +10,8 @@ import { Category, Group, PlaningService } from '../../services/planing/planing.
 })
 export class AppHeaderComponent implements OnInit {
   GENERAL_PLANING = 'PG';
-  FINAL = 'PF';
+  PHASE_FINAL = 'PF';
+  CLASSEMENT_FINAL = 'CF';
 
   collapsed = true;
 
@@ -58,9 +59,14 @@ export class AppHeaderComponent implements OnInit {
   }
 
   onSelectGroup(groupName: string) {
-    if (groupName == this.FINAL) {
-      this.router.navigate(['final/', this.selectedCategoryName]);
-    } else {
+    switch (groupName) {
+      case this.PHASE_FINAL:
+        this.router.navigate(['final/', this.selectedCategoryName]);
+        break
+      case this.CLASSEMENT_FINAL:
+        this.router.navigate(['final/ranks', this.selectedCategoryName]);
+        break
+      default:
       this.router.navigate(['category/', this.selectedCategoryName, groupName]);
     }
   }

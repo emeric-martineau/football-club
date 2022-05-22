@@ -11,7 +11,8 @@
       <tr *ngFor='let m of matchs'>
         <th scope="row">{{ formatNumber(m.getHour()) }}</th>
         <td scope="col">{{ m.getGround() }}</td>
-        <td scope="col">{{ m.getTeams()[0].getName() }} {{ m.getTeams()[0].getScore() }} - {{ m.getTeams()[1].getScore() }} {{ m.getTeams()[1].getName() }}</td>
+        <td scope="col" *ngIf="m?.isPlayed()">{{ m.getTeams()[0].getName() }} {{ m.getTeams()[0].getScore() }} - {{ m.getTeams()[1].getScore() }} {{ m.getTeams()[1].getName() }}</td>
+        <td scope="col" *ngIf="!m?.isPlayed()">{{ m.getTeams()[0].getName() }} - - - {{ m.getTeams()[1].getName() }}</td>
       </tr>
     </tbody>
   </table>

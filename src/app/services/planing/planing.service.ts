@@ -128,7 +128,7 @@ export class Group {
 }
 
 export class Category {
-  constructor(private name: string, private group: Group[], private final: Match[]) { };
+  constructor(private name: string, private group: Group[], private final: Match[], private finalRanks: Map<string, string>[]) { };
 
   public getName(): string {
       return this.name;
@@ -140,6 +140,10 @@ export class Category {
 
   public getFinal(): Match[] {
       return this.final;
+  }
+
+  public getFinalRanks(): Map<string, string>[] {
+    return this.finalRanks;
   }
 }
 
@@ -222,7 +226,18 @@ export class PlaningService {
     let categories: Category[] = [];
 
     data.Categorie.forEach((element: any) => {
-        categories.push(new Category(element.Name, this.generateGroups(element.Groupe), this.generateMatchs(element.PhaseFinale.Matchs.Match)))
+      // Only avaible in classement final
+      let finalRanks = element.ClassementFinal?.Places?.Place
+
+      if (!finalRanks) {
+        finalRanks = [];
+      }
+
+      categories.push(new Category(
+        element.Name,
+        this.generateGroups(element.Groupe),
+        this.generateMatchs(element.PhaseFinale.Matchs.Match),
+        finalRanks))
     });
 
     this.currentCategories = categories;

@@ -28,7 +28,8 @@
             </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
               <a *ngFor='let g of groups' ngbDropdownItem (click)="onSelectGroup(g.getName())">{{ g.getName() }}</a>
-              <a ngbDropdownItem (click)="onSelectGroup(FINAL)">Phase finale</a>
+              <a ngbDropdownItem (click)="onSelectGroup(PHASE_FINAL)">Phase finale</a>
+              <a ngbDropdownItem (click)="onSelectGroup(CLASSEMENT_FINAL)">Classement Final</a>
             </div>
           </li>
   

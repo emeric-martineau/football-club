@@ -10,6 +10,7 @@ import { CategoryPlaningComponent } from './components/category-planing/category
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FinalComponent } from './components/final/final.component';
+import { FinalRanksComponent } from './components/final-ranks/final-ranks.component';
 import { CategoryResultComponent } from './components/category-result/category-result.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     FinalComponent,
     CategoryResultComponent,
+    FinalRanksComponent
   ],
   imports: [
     BrowserModule,

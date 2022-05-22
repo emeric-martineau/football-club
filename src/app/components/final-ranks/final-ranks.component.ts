@@ -4,12 +4,13 @@ import { Subscription } from 'rxjs';
 import { Category, Match, PlaningService } from 'src/app/services/planing/planing.service';
 
 @Component({
-  selector: 'app-final',
-  templateUrl: './final.component.html',
-  styleUrls: ['./final.component.css']
+  selector: 'app-final-ranks',
+  templateUrl: './final-ranks.component.html',
+  styleUrls: ['./final-ranks.component.css']
 })
-export class FinalComponent implements OnInit {
-  matchs: Match[] = []
+export class FinalRanksComponent implements OnInit {
+  // Final ranks
+  finalRanks: Map<string, string>[] = [];
   // Category name
   categoryName = '';
 
@@ -40,21 +41,25 @@ export class FinalComponent implements OnInit {
     this.subParam?.unsubscribe();
   }
 
+  extractTeamName(data: Map<string, string>): string[] {
+    return Object.values(data);
+  }
+
   private findSelectCategory(category: string) {
     let m;
 
     if (category == '') {
-      m = this.categories[0].getFinal();
+      m = this.categories[0].getFinalRanks()
       this.categoryName = this.categories[0].getName();
     } else {
-      m = this.categories.find(element => element.getName() == category)?.getFinal();
+      m = this.categories.find(element => element.getName() == category)?.getFinalRanks();
       this.categoryName = category;
     }
 
     if (m) {
-      this.matchs = m;
+      this.finalRanks = m;
     } else {
-      this.matchs = [];
+      this.finalRanks = [];
     }
   }
 

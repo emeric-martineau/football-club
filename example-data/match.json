@@ -1540,15 +1540,15 @@
             {
                 "Heure": 151500000,
                 "Terrain": "Optic 2000",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "1/4 Finale 1",
                 "MatchID": 4,
                 "Equipe1": "GJ Joué-Les Touches",
-                "Score1": 1,
+                "Score1": 0,
                 "Equipe2": "AC Chapelain 1",
-                "Score2": 2,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1556,7 +1556,7 @@
             {
                 "Heure": 151500000,
                 "Terrain": "Mc Do",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "1/4 Finale 2",
@@ -1564,7 +1564,7 @@
                 "Equipe1": "Petit-Mars FC",
                 "Score1": 0,
                 "Equipe2": "Riaillé UFCED",
-                "Score2": 2,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1572,15 +1572,15 @@
             {
                 "Heure": 151500000,
                 "Terrain": "CLEAN Attitude",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 4èmes",
                 "MatchID": 2,
                 "Equipe1": "Nort AC 1",
-                "Score1": 1,
+                "Score1": 0,
                 "Equipe2": "AC Chapelain 3",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1588,15 +1588,15 @@
             {
                 "Heure": 151500000,
                 "Terrain": "Blouin AREHA",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 3èmes",
                 "MatchID": 3,
                 "Equipe1": "AC Chapelain 2",
-                "Score1": 2,
+                "Score1": 0,
                 "Equipe2": "Nozay OS",
-                "Score2": 4,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1626,9 +1626,9 @@
                 "MatchNom": "Classement 5-6ème",
                 "MatchID": 3,
                 "Equipe1": "USJA Carquefou",
-                "Score1": 2,
+                "Score1": 1,
                 "Equipe2": "Bouguenais Football",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1642,9 +1642,9 @@
                 "MatchNom": "Classement 5-6ème",
                 "MatchID": 3,
                 "Equipe1": "Nort AC",
-                "Score1": 2,
+                "Score1": 1,
                 "Equipe2": "Bouguenais Football",
-                "Score2": 3,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1668,15 +1668,15 @@
             {
                 "Heure": 154500000,
                 "Terrain": "Optic 2000",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 3èmes",
                 "MatchID": 3,
                 "Equipe1": "AC Chapelain 2",
-                "Score1": 2,
+                "Score1": 0,
                 "Equipe2": "SO Cholet",
-                "Score2": 3,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1684,15 +1684,15 @@
             {
                 "Heure": 154500000,
                 "Terrain": "Mc Do",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 3èmes",
                 "MatchID": 3,
                 "Equipe1": "USJA Carquefou",
-                "Score1": 1,
+                "Score1": 0,
                 "Equipe2": "Nozay OS",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1700,7 +1700,7 @@
             {
                 "Heure": 154500000,
                 "Terrain": "CLEAN Attitude",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 5èmes",
@@ -1708,7 +1708,7 @@
                 "Equipe1": "St Vincent LUSTVI",
                 "Score1": 0,
                 "Equipe2": "USSA Vertou",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1716,13 +1716,13 @@
             {
                 "Heure": 154500000,
                 "Terrain": "Blouin AREHA",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 4èmes",
                 "MatchID": 2,
                 "Equipe1": "Nort AC 3",
-                "Score1": 2,
+                "Score1": 0,
                 "Equipe2": "AC Chapelain 3",
                 "Score2": 0,
                 "TirsAuxButs": 0,
@@ -1732,13 +1732,13 @@
             {
                 "Heure": 160000000,
                 "Terrain": "Optic 2000",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "1/2 Finale 1",
                 "MatchID": 10,
                 "Equipe1": "Nort AC 1",
-                "Score1": 2,
+                "Score1": 0,
                 "Equipe2": "ES Haute-Goulaine",
                 "Score2": 0,
                 "TirsAuxButs": 0,
@@ -1748,13 +1748,13 @@
             {
                 "Heure": 160000000,
                 "Terrain": "Mc Do",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Classement 5-8ème",
                 "MatchID": 9,
                 "Equipe1": "AC Chapelain 1",
-                "Score1": 1,
+                "Score1": 0,
                 "Equipe2": "Oudon-Couffé FC",
                 "Score2": 0,
                 "TirsAuxButs": 0,
@@ -1764,15 +1764,15 @@
             {
                 "Heure": 160000000,
                 "Terrain": "CLEAN Attitude",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 5èmes",
                 "MatchID": 1,
                 "Equipe1": "JGE Sucé-sur-Erdre",
-                "Score1": 2,
+                "Score1": 0,
                 "Equipe2": "SC Nantes",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1780,15 +1780,15 @@
             {
                 "Heure": 160000000,
                 "Terrain": "Blouin AREHA",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Poule des 4èmes",
                 "MatchID": 2,
                 "Equipe1": "Nort AC 1",
-                "Score1": 1,
+                "Score1": 0,
                 "Equipe2": "Héric FC",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1796,15 +1796,15 @@
             {
                 "Heure": 161500000,
                 "Terrain": "Optic 2000",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "1/2 Finale 2",
                 "MatchID": 11,
                 "Equipe1": "AC Chapelain 2",
-                "Score1": 3,
+                "Score1": 0,
                 "Equipe2": "GJ St Julien-Divatte",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1812,13 +1812,13 @@
             {
                 "Heure": 161500000,
                 "Terrain": "Mc Do",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Classement 5-8ème",
                 "MatchID": 8,
                 "Equipe1": "Nort AC 3",
-                "Score1": 1,
+                "Score1": 0,
                 "Equipe2": "Nort AC 2",
                 "Score2": 0,
                 "TirsAuxButs": 0,
@@ -1828,15 +1828,15 @@
             {
                 "Heure": 164500000,
                 "Terrain": "Optic 2000",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Classement 7-8ème",
                 "MatchID": 12,
-                "Equipe1": "Nort AC 2",
-                "Score1": 1,
-                "Equipe2": "Oudon-Couffé FC",
-                "Score2": 2,
+                "Equipe1": "Perdant match 8",
+                "Score1": 0,
+                "Equipe2": "Perdant match 9",
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1844,15 +1844,15 @@
             {
                 "Heure": 164500000,
                 "Terrain": "Mc Do",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Classement 5-6ème",
                 "MatchID": 13,
-                "Equipe1": "Nort AC 3",
-                "Score1": 2,
-                "Equipe2": "Petit-Mars FC",
-                "Score2": 3,
+                "Equipe1": "Vainqueur match 8",
+                "Score1": 0,
+                "Equipe2": "Vainqueur match 9",
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1860,14 +1860,14 @@
             {
                 "Heure": 170000000,
                 "Terrain": "Optic 2000",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Classement 3-4ème",
                 "MatchID": 14,
-                "Equipe1": "ES Haute-Goulaine",
-                "Score1": 1,
-                "Equipe2": "GJ St Julien-Divatte",
+                "Equipe1": "Perdant match 10",
+                "Score1": 0,
+                "Equipe2": "Perdant match 11",
                 "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
@@ -1882,9 +1882,9 @@
                 "MatchNom": "Finale U10",
                 "MatchID": 5,
                 "Equipe1": "USJA Carquefou",
-                "Score1": 2,
+                "Score1": 1,
                 "Equipe2": "US Thouaré",
-                "Score2": 3,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1898,9 +1898,9 @@
                 "MatchNom": "Finale U11",
                 "MatchID": 5,
                 "Equipe1": "Nort AC 1",
-                "Score1": 2,
+                "Score1": 1,
                 "Equipe2": "Oudon-Couffé FC",
-                "Score2": 1,
+                "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
                 "TaB2": 0
@@ -1908,14 +1908,14 @@
             {
                 "Heure": 173000000,
                 "Terrain": "Mc Do",
-                "Status": 2,
+                "Status": 1,
                 "CategoryID": 3,
                 "CategoryNom": "U12/U13",
                 "MatchNom": "Finale U12/U13",
                 "MatchID": 15,
-                "Equipe1": "Nort AC 1",
-                "Score1": 1,
-                "Equipe2": "Riaillé UFCED",
+                "Equipe1": "Vainqueur match 10",
+                "Score1": 0,
+                "Equipe2": "Vainqueur match 11",
                 "Score2": 0,
                 "TirsAuxButs": 0,
                 "TaB1": 0,
@@ -1934,6 +1934,17 @@
                     "Classement": {
                         "Place": [
                             {
+                                "Equipe": "USJA Carquefou",
+                                "J": 5,
+                                "V": 4,
+                                "N": 0,
+                                "D": 1,
+                                "BP": 10,
+                                "BC": 6,
+                                "Diff": 4,
+                                "Points": 16
+                            },
+                            {
                                 "Equipe": "Métallo Chantenay Nantes",
                                 "J": 5,
                                 "V": 3,
@@ -1945,26 +1956,15 @@
                                 "Points": 13
                             },
                             {
-                                "Equipe": "USJA Carquefou",
-                                "J": 5,
-                                "V": 3,
-                                "N": 0,
-                                "D": 2,
-                                "BP": 11,
-                                "BC": 9,
-                                "Diff": 2,
-                                "Points": 12
-                            },
-                            {
                                 "Equipe": "Nort AC",
                                 "J": 5,
-                                "V": 2,
+                                "V": 3,
                                 "N": 1,
-                                "D": 2,
-                                "BP": 14,
-                                "BC": 12,
-                                "Diff": 2,
-                                "Points": 9
+                                "D": 1,
+                                "BP": 13,
+                                "BC": 9,
+                                "Diff": 4,
+                                "Points": 13
                             },
                             {
                                 "Equipe": "FC Mouzeil Teillé Ligné",
@@ -2162,23 +2162,12 @@
                             {
                                 "Equipe": "US Thouaré",
                                 "J": 5,
-                                "V": 4,
-                                "N": 1,
-                                "D": 0,
-                                "BP": 13,
-                                "BC": 8,
-                                "Diff": 5,
-                                "Points": 17
-                            },
-                            {
-                                "Equipe": "Bouguenais Football",
-                                "J": 5,
                                 "V": 3,
                                 "N": 1,
                                 "D": 1,
-                                "BP": 14,
-                                "BC": 12,
-                                "Diff": 2,
+                                "BP": 10,
+                                "BC": 7,
+                                "Diff": 3,
                                 "Points": 13
                             },
                             {
@@ -2190,6 +2179,17 @@
                                 "BP": 15,
                                 "BC": 13,
                                 "Diff": 2,
+                                "Points": 9
+                            },
+                            {
+                                "Equipe": "Bouguenais Football",
+                                "J": 5,
+                                "V": 2,
+                                "N": 1,
+                                "D": 2,
+                                "BP": 11,
+                                "BC": 11,
+                                "Diff": 0,
                                 "Points": 9
                             },
                             {
@@ -2426,9 +2426,9 @@
                             "MatchNom": "Classement 5-6ème",
                             "MatchID": 3,
                             "Equipe1": "Nort AC",
-                            "Score1": 2,
+                            "Score1": 1,
                             "Equipe2": "Bouguenais Football",
-                            "Score2": 3,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -2458,12 +2458,48 @@
                             "MatchNom": "Finale U10",
                             "MatchID": 5,
                             "Equipe1": "USJA Carquefou",
-                            "Score1": 2,
+                            "Score1": 1,
                             "Equipe2": "US Thouaré",
-                            "Score2": 3,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
+                        }
+                    ]
+                }
+            },
+            "ClassementFinal": {
+                "Places": {
+                    "Place": [
+                        {
+                            "Equipe": "USJA Carquefou"
+                        },
+                        {
+                            "Equipe": "US Thouaré"
+                        },
+                        {
+                            "Equipe": "Métallo Chantenay Nantes"
+                        },
+                        {
+                            "Equipe": "SC Nantes"
+                        },
+                        {
+                            "Equipe": "Nort AC"
+                        },
+                        {
+                            "Equipe": "Bouguenais Football"
+                        },
+                        {
+                            "Equipe": "FC Mouzeil Teillé Ligné"
+                        },
+                        {
+                            "Equipe": "JGE Sucé-sur-Erdre"
+                        },
+                        {
+                            "Equipe": "US Loire Divatte"
+                        },
+                        {
+                            "Equipe": "Savenay Malville Prinquiau FC"
                         }
                     ]
                 }
@@ -2483,8 +2519,8 @@
                                 "V": 3,
                                 "N": 2,
                                 "D": 0,
-                                "BP": 7,
-                                "BC": 4,
+                                "BP": 6,
+                                "BC": 3,
                                 "Diff": 3,
                                 "Points": 14
                             },
@@ -2505,8 +2541,8 @@
                                 "V": 3,
                                 "N": 1,
                                 "D": 1,
-                                "BP": 10,
-                                "BC": 3,
+                                "BP": 9,
+                                "BC": 2,
                                 "Diff": 7,
                                 "Points": 13
                             },
@@ -2709,8 +2745,8 @@
                                 "V": 2,
                                 "N": 2,
                                 "D": 1,
-                                "BP": 9,
-                                "BC": 5,
+                                "BP": 8,
+                                "BC": 4,
                                 "Diff": 4,
                                 "Points": 10
                             },
@@ -2731,8 +2767,8 @@
                                 "V": 2,
                                 "N": 0,
                                 "D": 3,
-                                "BP": 10,
-                                "BC": 9,
+                                "BP": 9,
+                                "BC": 8,
                                 "Diff": 1,
                                 "Points": 8
                             },
@@ -2986,9 +3022,9 @@
                             "MatchNom": "Classement 5-6ème",
                             "MatchID": 3,
                             "Equipe1": "USJA Carquefou",
-                            "Score1": 2,
+                            "Score1": 1,
                             "Equipe2": "Bouguenais Football",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -3002,12 +3038,48 @@
                             "MatchNom": "Finale U11",
                             "MatchID": 5,
                             "Equipe1": "Nort AC 1",
-                            "Score1": 2,
+                            "Score1": 1,
                             "Equipe2": "Oudon-Couffé FC",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
+                        }
+                    ]
+                }
+            },
+            "ClassementFinal": {
+                "Places": {
+                    "Place": [
+                        {
+                            "Equipe": "Nort AC 1"
+                        },
+                        {
+                            "Equipe": "Oudon-Couffé FC"
+                        },
+                        {
+                            "Equipe": "Dresny Plessé"
+                        },
+                        {
+                            "Equipe": "SC Nantes"
+                        },
+                        {
+                            "Equipe": "USJA Carquefou"
+                        },
+                        {
+                            "Equipe": "Bouguenais Football"
+                        },
+                        {
+                            "Equipe": "AS Casson"
+                        },
+                        {
+                            "Equipe": "Nort AC 2"
+                        },
+                        {
+                            "Equipe": "Savenay Malville Prinquiau FC"
+                        },
+                        {
+                            "Equipe": "- Exempt -"
                         }
                     ]
                 }
@@ -3022,59 +3094,59 @@
                     "Classement": {
                         "Place": [
                             {
-                                "Equipe": "Nort AC 1",
-                                "J": 9,
-                                "V": 3,
+                                "Equipe": "GJ Joué-Les Touches",
+                                "J": 4,
+                                "V": 2,
                                 "N": 2,
-                                "D": 4,
-                                "BP": 11,
-                                "BC": 15,
-                                "Diff": -4,
-                                "Points": 14
+                                "D": 0,
+                                "BP": 9,
+                                "BC": 4,
+                                "Diff": 5,
+                                "Points": 10
                             },
                             {
                                 "Equipe": "JGE Sucé-sur-Erdre",
-                                "J": 7,
-                                "V": 3,
+                                "J": 6,
+                                "V": 2,
                                 "N": 2,
                                 "D": 2,
-                                "BP": 11,
-                                "BC": 11,
-                                "Diff": 0,
-                                "Points": 14
+                                "BP": 9,
+                                "BC": 10,
+                                "Diff": -1,
+                                "Points": 10
                             },
                             {
                                 "Equipe": "Riaillé UFCED",
-                                "J": 6,
-                                "V": 3,
+                                "J": 4,
+                                "V": 2,
                                 "N": 1,
-                                "D": 2,
-                                "BP": 14,
-                                "BC": 12,
-                                "Diff": 2,
-                                "Points": 13
+                                "D": 1,
+                                "BP": 12,
+                                "BC": 11,
+                                "Diff": 1,
+                                "Points": 9
                             },
                             {
                                 "Equipe": "AC Chapelain 2",
-                                "J": 8,
-                                "V": 2,
+                                "J": 5,
+                                "V": 1,
                                 "N": 3,
-                                "D": 3,
-                                "BP": 16,
-                                "BC": 14,
-                                "Diff": 2,
-                                "Points": 11
+                                "D": 1,
+                                "BP": 9,
+                                "BC": 6,
+                                "Diff": 3,
+                                "Points": 7
                             },
                             {
-                                "Equipe": "GJ Joué-Les Touches",
+                                "Equipe": "Nort AC 1",
                                 "J": 5,
-                                "V": 2,
-                                "N": 2,
-                                "D": 1,
-                                "BP": 10,
-                                "BC": 6,
-                                "Diff": 4,
-                                "Points": 10
+                                "V": 1,
+                                "N": 0,
+                                "D": 4,
+                                "BP": 6,
+                                "BC": 13,
+                                "Diff": -7,
+                                "Points": 4
                             }
                         ]
                     },
@@ -3249,58 +3321,58 @@
                         "Place": [
                             {
                                 "Equipe": "Nort AC 3",
-                                "J": 9,
-                                "V": 5,
-                                "N": 1,
-                                "D": 3,
-                                "BP": 13,
-                                "BC": 9,
-                                "Diff": 4,
-                                "Points": 21
-                            },
-                            {
-                                "Equipe": "AC Chapelain 1",
-                                "J": 6,
-                                "V": 4,
-                                "N": 1,
-                                "D": 1,
-                                "BP": 9,
-                                "BC": 4,
-                                "Diff": 5,
-                                "Points": 17
-                            },
-                            {
-                                "Equipe": "Petit-Mars FC",
                                 "J": 6,
                                 "V": 3,
-                                "N": 2,
-                                "D": 1,
-                                "BP": 13,
-                                "BC": 12,
-                                "Diff": 1,
-                                "Points": 14
+                                "N": 1,
+                                "D": 2,
+                                "BP": 8,
+                                "BC": 6,
+                                "Diff": 2,
+                                "Points": 13
                             },
                             {
                                 "Equipe": "SC Nantes",
-                                "J": 7,
+                                "J": 6,
                                 "V": 3,
                                 "N": 0,
-                                "D": 4,
-                                "BP": 11,
-                                "BC": 13,
-                                "Diff": -2,
+                                "D": 3,
+                                "BP": 10,
+                                "BC": 11,
+                                "Diff": -1,
                                 "Points": 12
                             },
                             {
-                                "Equipe": "USJA Carquefou",
-                                "J": 7,
+                                "Equipe": "Petit-Mars FC",
+                                "J": 4,
                                 "V": 2,
-                                "N": 3,
+                                "N": 2,
+                                "D": 0,
+                                "BP": 10,
+                                "BC": 8,
+                                "Diff": 2,
+                                "Points": 10
+                            },
+                            {
+                                "Equipe": "USJA Carquefou",
+                                "J": 6,
+                                "V": 2,
+                                "N": 2,
                                 "D": 2,
-                                "BP": 7,
-                                "BC": 9,
+                                "BP": 6,
+                                "BC": 8,
                                 "Diff": -2,
-                                "Points": 11
+                                "Points": 10
+                            },
+                            {
+                                "Equipe": "AC Chapelain 1",
+                                "J": 4,
+                                "V": 2,
+                                "N": 1,
+                                "D": 1,
+                                "BP": 6,
+                                "BC": 3,
+                                "Diff": 3,
+                                "Points": 9
                             }
                         ]
                     },
@@ -3474,58 +3546,58 @@
                     "Classement": {
                         "Place": [
                             {
-                                "Equipe": "SO Cholet",
-                                "J": 7,
-                                "V": 3,
-                                "N": 2,
-                                "D": 2,
-                                "BP": 15,
-                                "BC": 13,
-                                "Diff": 2,
-                                "Points": 14
-                            },
-                            {
-                                "Equipe": "Oudon-Couffé FC",
-                                "J": 7,
-                                "V": 3,
-                                "N": 1,
-                                "D": 3,
-                                "BP": 13,
-                                "BC": 10,
-                                "Diff": 3,
-                                "Points": 13
-                            },
-                            {
                                 "Equipe": "Nort AC 2",
-                                "J": 7,
+                                "J": 5,
                                 "V": 3,
                                 "N": 1,
-                                "D": 3,
-                                "BP": 11,
-                                "BC": 13,
-                                "Diff": -2,
+                                "D": 1,
+                                "BP": 10,
+                                "BC": 10,
+                                "Diff": 0,
                                 "Points": 13
                             },
                             {
-                                "Equipe": "Héric FC",
-                                "J": 7,
+                                "Equipe": "SO Cholet",
+                                "J": 6,
                                 "V": 2,
                                 "N": 2,
-                                "D": 3,
-                                "BP": 8,
-                                "BC": 9,
-                                "Diff": -1,
+                                "D": 2,
+                                "BP": 12,
+                                "BC": 11,
+                                "Diff": 1,
                                 "Points": 10
                             },
                             {
+                                "Equipe": "Oudon-Couffé FC",
+                                "J": 5,
+                                "V": 2,
+                                "N": 1,
+                                "D": 2,
+                                "BP": 11,
+                                "BC": 8,
+                                "Diff": 3,
+                                "Points": 9
+                            },
+                            {
+                                "Equipe": "Héric FC",
+                                "J": 6,
+                                "V": 2,
+                                "N": 1,
+                                "D": 3,
+                                "BP": 7,
+                                "BC": 8,
+                                "Diff": -1,
+                                "Points": 9
+                            },
+                            {
                                 "Equipe": "St Vincent LUSTVI",
-                                "J": 7,
+                                "J": 6,
                                 "V": 0,
                                 "N": 2,
-                                "D": 5,
+                                "D": 4,
                                 "BP": 7,
-                                "BC": 13,
-                                "Diff": -6,
+                                "BC": 12,
+                                "Diff": -5,
                                 "Points": 2
                             }
                         ]
@@ -3700,59 +3772,59 @@
                     "Classement": {
                         "Place": [
                             {
-                                "Equipe": "Nozay OS",
-                                "J": 7,
-                                "V": 3,
-                                "N": 4,
-                                "D": 0,
-                                "BP": 15,
-                                "BC": 11,
-                                "Diff": 4,
-                                "Points": 16
-                            },
-                            {
                                 "Equipe": "GJ St Julien-Divatte",
-                                "J": 7,
+                                "J": 5,
                                 "V": 3,
                                 "N": 2,
-                                "D": 2,
-                                "BP": 13,
-                                "BC": 9,
-                                "Diff": 4,
+                                "D": 0,
+                                "BP": 12,
+                                "BC": 5,
+                                "Diff": 7,
                                 "Points": 14
                             },
                             {
+                                "Equipe": "Nozay OS",
+                                "J": 5,
+                                "V": 2,
+                                "N": 3,
+                                "D": 0,
+                                "BP": 10,
+                                "BC": 8,
+                                "Diff": 2,
+                                "Points": 11
+                            },
+                            {
                                 "Equipe": "ES Haute-Goulaine",
-                                "J": 7,
-                                "V": 3,
+                                "J": 5,
+                                "V": 2,
                                 "N": 1,
-                                "D": 3,
-                                "BP": 11,
-                                "BC": 12,
-                                "Diff": -1,
-                                "Points": 13
+                                "D": 2,
+                                "BP": 10,
+                                "BC": 10,
+                                "Diff": 0,
+                                "Points": 9
                             },
                             {
                                 "Equipe": "AC Chapelain 3",
-                                "J": 7,
+                                "J": 5,
                                 "V": 1,
-                                "N": 3,
-                                "D": 3,
-                                "BP": 6,
-                                "BC": 10,
-                                "Diff": -4,
-                                "Points": 7
+                                "N": 2,
+                                "D": 2,
+                                "BP": 5,
+                                "BC": 7,
+                                "Diff": -2,
+                                "Points": 6
                             },
                             {
                                 "Equipe": "USSA Vertou",
-                                "J": 7,
-                                "V": 1,
+                                "J": 6,
+                                "V": 0,
                                 "N": 1,
                                 "D": 5,
-                                "BP": 5,
+                                "BP": 4,
                                 "BC": 14,
-                                "Diff": -9,
-                                "Points": 5
+                                "Diff": -10,
+                                "Points": 1
                             }
                         ]
                     },
@@ -4120,15 +4192,15 @@
                         {
                             "Heure": 151500000,
                             "Terrain": "Optic 2000",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "1/4 Finale 1",
                             "MatchID": 4,
                             "Equipe1": "GJ Joué-Les Touches",
-                            "Score1": 1,
+                            "Score1": 0,
                             "Equipe2": "AC Chapelain 1",
-                            "Score2": 2,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4136,7 +4208,7 @@
                         {
                             "Heure": 151500000,
                             "Terrain": "Mc Do",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "1/4 Finale 2",
@@ -4144,7 +4216,7 @@
                             "Equipe1": "Petit-Mars FC",
                             "Score1": 0,
                             "Equipe2": "Riaillé UFCED",
-                            "Score2": 2,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4152,15 +4224,15 @@
                         {
                             "Heure": 151500000,
                             "Terrain": "CLEAN Attitude",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 4èmes",
                             "MatchID": 2,
                             "Equipe1": "Nort AC 1",
-                            "Score1": 1,
+                            "Score1": 0,
                             "Equipe2": "AC Chapelain 3",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4168,15 +4240,15 @@
                         {
                             "Heure": 151500000,
                             "Terrain": "Blouin AREHA",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 3èmes",
                             "MatchID": 3,
                             "Equipe1": "AC Chapelain 2",
-                            "Score1": 2,
+                            "Score1": 0,
                             "Equipe2": "Nozay OS",
-                            "Score2": 4,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4184,15 +4256,15 @@
                         {
                             "Heure": 154500000,
                             "Terrain": "Optic 2000",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 3èmes",
                             "MatchID": 3,
                             "Equipe1": "AC Chapelain 2",
-                            "Score1": 2,
+                            "Score1": 0,
                             "Equipe2": "SO Cholet",
-                            "Score2": 3,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4200,15 +4272,15 @@
                         {
                             "Heure": 154500000,
                             "Terrain": "Mc Do",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 3èmes",
                             "MatchID": 3,
                             "Equipe1": "USJA Carquefou",
-                            "Score1": 1,
+                            "Score1": 0,
                             "Equipe2": "Nozay OS",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4216,7 +4288,7 @@
                         {
                             "Heure": 154500000,
                             "Terrain": "CLEAN Attitude",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 5èmes",
@@ -4224,7 +4296,7 @@
                             "Equipe1": "St Vincent LUSTVI",
                             "Score1": 0,
                             "Equipe2": "USSA Vertou",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4232,13 +4304,13 @@
                         {
                             "Heure": 154500000,
                             "Terrain": "Blouin AREHA",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 4èmes",
                             "MatchID": 2,
                             "Equipe1": "Nort AC 3",
-                            "Score1": 2,
+                            "Score1": 0,
                             "Equipe2": "AC Chapelain 3",
                             "Score2": 0,
                             "TirsAuxButs": 0,
@@ -4248,13 +4320,13 @@
                         {
                             "Heure": 160000000,
                             "Terrain": "Optic 2000",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "1/2 Finale 1",
                             "MatchID": 10,
                             "Equipe1": "Nort AC 1",
-                            "Score1": 2,
+                            "Score1": 0,
                             "Equipe2": "ES Haute-Goulaine",
                             "Score2": 0,
                             "TirsAuxButs": 0,
@@ -4264,13 +4336,13 @@
                         {
                             "Heure": 160000000,
                             "Terrain": "Mc Do",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Classement 5-8ème",
                             "MatchID": 9,
                             "Equipe1": "AC Chapelain 1",
-                            "Score1": 1,
+                            "Score1": 0,
                             "Equipe2": "Oudon-Couffé FC",
                             "Score2": 0,
                             "TirsAuxButs": 0,
@@ -4280,15 +4352,15 @@
                         {
                             "Heure": 160000000,
                             "Terrain": "CLEAN Attitude",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 5èmes",
                             "MatchID": 1,
                             "Equipe1": "JGE Sucé-sur-Erdre",
-                            "Score1": 2,
+                            "Score1": 0,
                             "Equipe2": "SC Nantes",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4296,15 +4368,15 @@
                         {
                             "Heure": 160000000,
                             "Terrain": "Blouin AREHA",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Poule des 4èmes",
                             "MatchID": 2,
                             "Equipe1": "Nort AC 1",
-                            "Score1": 1,
+                            "Score1": 0,
                             "Equipe2": "Héric FC",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4312,15 +4384,15 @@
                         {
                             "Heure": 161500000,
                             "Terrain": "Optic 2000",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "1/2 Finale 2",
                             "MatchID": 11,
                             "Equipe1": "AC Chapelain 2",
-                            "Score1": 3,
+                            "Score1": 0,
                             "Equipe2": "GJ St Julien-Divatte",
-                            "Score2": 1,
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4328,13 +4400,13 @@
                         {
                             "Heure": 161500000,
                             "Terrain": "Mc Do",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Classement 5-8ème",
                             "MatchID": 8,
                             "Equipe1": "Nort AC 3",
-                            "Score1": 1,
+                            "Score1": 0,
                             "Equipe2": "Nort AC 2",
                             "Score2": 0,
                             "TirsAuxButs": 0,
@@ -4344,15 +4416,15 @@
                         {
                             "Heure": 164500000,
                             "Terrain": "Optic 2000",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Classement 7-8ème",
                             "MatchID": 12,
-                            "Equipe1": "Nort AC 2",
-                            "Score1": 1,
-                            "Equipe2": "Oudon-Couffé FC",
-                            "Score2": 2,
+                            "Equipe1": "Perdant match 8",
+                            "Score1": 0,
+                            "Equipe2": "Perdant match 9",
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4360,15 +4432,15 @@
                         {
                             "Heure": 164500000,
                             "Terrain": "Mc Do",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Classement 5-6ème",
                             "MatchID": 13,
-                            "Equipe1": "Nort AC 3",
-                            "Score1": 2,
-                            "Equipe2": "Petit-Mars FC",
-                            "Score2": 3,
+                            "Equipe1": "Vainqueur match 8",
+                            "Score1": 0,
+                            "Equipe2": "Vainqueur match 9",
+                            "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
                             "TaB2": 0
@@ -4376,14 +4448,14 @@
                         {
                             "Heure": 170000000,
                             "Terrain": "Optic 2000",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Classement 3-4ème",
                             "MatchID": 14,
-                            "Equipe1": "ES Haute-Goulaine",
-                            "Score1": 1,
-                            "Equipe2": "GJ St Julien-Divatte",
+                            "Equipe1": "Perdant match 10",
+                            "Score1": 0,
+                            "Equipe2": "Perdant match 11",
                             "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
@@ -4392,14 +4464,14 @@
                         {
                             "Heure": 173000000,
                             "Terrain": "Mc Do",
-                            "Status": 2,
+                            "Status": 1,
                             "CategoryID": 3,
                             "CategoryNom": "U12/U13",
                             "MatchNom": "Finale U12/U13",
                             "MatchID": 15,
-                            "Equipe1": "Nort AC 1",
-                            "Score1": 1,
-                            "Equipe2": "Riaillé UFCED",
+                            "Equipe1": "Vainqueur match 10",
+                            "Score1": 0,
+                            "Equipe2": "Vainqueur match 11",
                             "Score2": 0,
                             "TirsAuxButs": 0,
                             "TaB1": 0,
