@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Subject, Subscription } from 'rxjs';
 
 export class Team {
-  constructor(private name: string, private score: number) { }
+  constructor(private name: string, private score: number, private logo: string) { }
 
   getName(): string {
     return this.name;
@@ -12,6 +12,10 @@ export class Team {
 
   getScore(): number {
     return this.score;
+  }
+
+  getLogo(): string {
+    return this.logo;
   }
 }
 
@@ -252,8 +256,8 @@ export class PlaningService {
         m.CategoryNom,
         m.MatchNom, 
         [
-          new Team(m.Equipe1, m.Score1),
-          new Team(m.Equipe2, m.Score2)
+          new Team(m.Equipe1, m.Score1, (m.LogoEquipe1 && m.LogoEquipe1 !== 'LogoDefault') ? m.LogoEquipe1 : 'assets/missing.jpg'),
+          new Team(m.Equipe2, m.Score2, (m.LogoEquipe2 && m.LogoEquipe2 !== 'LogoDefault') ? m.LogoEquipe2 : 'assets/missing.jpg')
         ],
         m.Terrain);
   }

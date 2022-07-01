@@ -4,7 +4,10 @@
             <td colspan="2">{{ match?.getName() }}</td>
         </tr>
         <tr *ngFor='let t of match?.getTeams()'>
-            <th>{{ t.getName() }}</th>
+            <th class="team">
+                <img class="logo" [src]="t.getLogo()" />
+                {{ t.getName() }}
+            </th>
             <td class="score">{{ match?.isPlayed() ? t.getScore() : '-' }}</td>
         </tr>
     </table>
